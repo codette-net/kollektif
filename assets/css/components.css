@@ -1037,7 +1037,7 @@ address {
 .gallery .group {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%,300px), 1fr));
-  grid-template-rows: repeat(auto-fill,min(100%, 300px));
+  /* grid-template-rows: repeat(auto-fill,min(100%, 300px)); */
   grid-gap: 1rem;
   grid-auto-flow: dense;
   padding-inline: 1rem;
@@ -1061,7 +1061,7 @@ address {
   }
   /* select the last even child in the group and span it to the end */
   .gallery .group > :nth-last-child(2):nth-child(odd) {
-    grid-column: span 2 / -1;
+    grid-column: span 2;
     grid-row: span 2;
     aspect-ratio: unset;
   }
