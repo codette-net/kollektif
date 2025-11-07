@@ -1,0 +1,33 @@
+@media screen and (max-width: 736px) {
+  .panel.banner .content {
+    padding: 2.8875rem 1.75rem 1.3875rem 1.75rem;
+    flex-basis: 60%;
+  }
+
+  .panel.banner .content > .actions:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .panel.banner .image {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+  .panel.banner .content {
+    flex-basis: auto;
+  }
+
+  .panel.banner .image {
+    flex-basis: auto;
+    height: 18rem;
+  }
+
+  .panel.banner.left {
+    flex-direction: column;
+  }
+
+  .panel.banner.right {
+    flex-direction: column-reverse;
+  }
+}
