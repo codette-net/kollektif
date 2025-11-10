@@ -1220,8 +1220,8 @@ address {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  min-height: 90vh;
-  min-height: 90dvh;
+  /* min-height: 90vh;
+  min-height: 90dvh; */
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -1519,12 +1519,10 @@ main section.banner {
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: flex-start;
-  /* border: 8px solid orangered; */
-  min-height: 100vh;
-  min-height: 100dvh;
+  /* min-height: 100vh;
+  min-height: 100dvh; */
   width: min(100%, 1280px);
-  /* aspect-ratio: 16 / 9; */
-  /* margin-block: 0 2rem; */
+
   padding-block: 0 2rem;
 }
 
