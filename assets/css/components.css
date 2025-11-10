@@ -359,6 +359,7 @@ ul.actions {
   cursor: default;
   list-style: none;
   margin-left: -0.75rem;
+  margin-block: 0.5rem;
   padding-left: 0;
 }
 
@@ -1060,11 +1061,18 @@ address {
     aspect-ratio: unset;
   }
   /* select the last even child in the group and span it to the end */
-  .gallery .group > :nth-last-child(2):nth-child(odd) {
+  .gallery .group > :nth-last-child(2):nth-child(even) {
     grid-column: span 2;
     grid-row: span 2;
     aspect-ratio: unset;
   }
+
+  .gallery .group video:last-child {
+    grid-column: span 2;
+  }
+
+
+
   /* .gallery .group > :last-child {
     grid-column: span 2 / -1;
     grid-row: span 2;
