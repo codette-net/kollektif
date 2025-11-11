@@ -1367,6 +1367,7 @@ address {
   align-items: center;
   /* border: 1px solid purple; */
   justify-content: space-between;
+  padding-block: 1rem;;
 }
 
 .panel.spotlight .col {
@@ -1574,8 +1575,8 @@ main section.banner {
   align-items: stretch;
   position: relative;
   overflow-y:hidden;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 60vh;
+  min-height: 60dvh;
 }
 
 .panel.spotlight > * {
