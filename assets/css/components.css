@@ -981,6 +981,8 @@ address {
 .gallery {
     display: block;
     width: min(100%, 1280px);
+    padding-inline: 1rem;
+
 }
 
 /* .gallery > * {
@@ -1032,7 +1034,6 @@ address {
     /* grid-template-rows: repeat(auto-fill,min(100%, 300px)); */
     grid-gap: 1rem;
     grid-auto-flow: dense;
-    padding-inline: 1rem;
 }
 
 .gallery .group > .grid-span-full {
@@ -1216,7 +1217,8 @@ address {
   min-width: 10rem;
 } */
 
-.panel > *.color0 {
+.panel > *.color0,
+main {
     background-image: url("../../images/overlay.png"),
         linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
     background-size: 128px 128px, auto;

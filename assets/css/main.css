@@ -6,8 +6,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 :root {
---padding-block: 2.8rem 1.2rem;
---padding-inline: 1.8rem;
+--padding-block: 1.5rem;
+--padding-inline: 1rem;
 --padding-line-clamp: clamp(2rem, 5vw + var(--padding-inline), calc(var(--padding-inline) * 2))
 }
 
@@ -242,11 +242,19 @@ main {
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-  padding-block: 1em;
-  padding-inline: 1em;
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
   margin: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+footer {
+  background-color: #353865;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: 0.9rem;
+}
 
 /* 
 		body:before {
