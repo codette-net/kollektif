@@ -297,7 +297,57 @@
 
 
 		</section>
+
+
+	
 		<section class="panel spotlight left">
+			<div class="col ">
+				<div class="content">
+					<h2 class="major">Exposition Kollektif 2024</h2>
+					<p>The Francesco de Lacerda Museum is honored to host the temporary exhibition “Kollektif”, which will be on
+						view from February 24th to April 8th. Its inauguration will be on February 24th, at 3 pm and will be
+						accompanied by a musical moment with Ewout Adriaans, Ger Van Der Zee and Marcos Eltorete Fernandez Gardon <br>, where they will
+						present a unique and original musical composition.</p>
+					</p>
+					<!-- <ul class="actions">
+						<li><a href="https://www.facebook.com/events/951058283117987/?ref=newsfeed"
+								class="button primary color1">More info</a></li>
+					</ul> -->
+
+				</div>
+			</div>
+			<div class="image filtered tinted" data-position="center">
+				<img src="images/expoJan/expoLacerda.jpg" alt="">
+			</div>
+
+		</section>
+
+		<section class="panel color1">
+			<div class="col">
+					<div class="gallery">
+										<h3 class="major"> Kollektif in museum Francesco Lacerda </h3>
+										<p>
+											Video of Ewout and Marcos playing at the opening of the expo Kollektif in museum Francesco Lacerda.
+										</p>
+										<video controls preload="auto" width="100%" height="auto" loading="lazy" poster="./images/expoJan/museuFranciscoDeLacerda.jpg">
+											<source src="videos/kollektif_Ewout_Marcos_Expo_lacerda.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+					</div>
+			</div>
+		</section>
+		<section class="panel color0">
+			<div class="col">
+					<div class="gallery">
+										<h3 class="major">Ewout playing in terreiros</h3>
+										<video controls preload="auto" width="100%" height="auto" loading="lazy">
+											<source src="videos/ewout_terreiros.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+										</video>
+					</div>
+			</div>
+		</section>
+				<section class="panel spotlight left">
 			<div class="col ">
 				<div class="content">
 					<h2 class="major">Expostion Fringe 2024</h2>
@@ -317,40 +367,6 @@
 			</div>
 
 		</section>
-
-	
-		<section class="panel spotlight left">
-			<div class="col ">
-				<div class="content">
-					<h2 class="major">Exposition Kollektif 2024</h2>
-					<p>The Francisco de Lacerda Museum is honored to host the temporary exhibition “Kollektif”, which will be on
-						view from February 24th to April 8th. Its inauguration will be on February 24th, at 3 pm and will be
-						accompanied by a musical moment with Ewout Adriaans, Ger Van Der Zee and Marcos Eltorete Fernandez Gardon <br>, where they will
-						present a unique and original musical composition.</p>
-					</p>
-					<!-- <ul class="actions">
-						<li><a href="https://www.facebook.com/events/951058283117987/?ref=newsfeed"
-								class="button primary color1">More info</a></li>
-					</ul> -->
-
-				</div>
-			</div>
-			<div class="image filtered tinted" data-position="center">
-				<img src="images/expoJan/expoLacerda.jpg" alt="">
-			</div>
-
-		</section>
-		<section class="panel color0">
-			<div class="col">
-					<div class="gallery">
-										<h3>Ewout playing in terreiros</h3>
-										<video controls preload="auto" width="100%" height="auto" loading="lazy">
-											<source src="videos/ewout_terreiros.mp4" type="video/mp4">
-											Your browser does not support the video tag.
-										</video>
-					</div>
-			</div>
-		</section>
 		<!-- <section class="panel banner color1">
 				<div class="intro">
 					<h2 class="major">Music Projects</h2>
@@ -367,12 +383,24 @@
 			let nav = document.querySelector('.nav__content');
 			let menu = document.querySelector('.nav-btn-open')
 			let menu_close = document.querySelector('.nav-btn-close');
-			menu.addEventListener('click', (event) => {
+			if (menu) {menu.addEventListener('click', (event) => {
 				nav.classList.add('open')
 			});
 			menu_close.addEventListener('click', (event) => {
 				nav.classList.remove('open')
-			})
+			})}
+			//lazy load videos 
+			document.addEventListener("DOMContentLoaded", function () {
+				const videos = document.querySelectorAll("video[loading='lazy']");
+				videos.forEach(video => {
+					const source = video.querySelector("source");
+					if (source) {
+						source.src = source.dataset.src;
+						video.load();
+					}
+				});
+			});
+
 		</script>
 		<script src="assets/js/Josbrowser.js"></script>
 		<script src="assets/js/josmain.js"></script>
