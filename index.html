@@ -389,17 +389,7 @@
 			menu_close.addEventListener('click', (event) => {
 				nav.classList.remove('open')
 			})}
-			//lazy load videos 
-			document.addEventListener("DOMContentLoaded", function () {
-				const videos = document.querySelectorAll("video[loading='lazy']");
-				videos.forEach(video => {
-					const source = video.querySelector("source");
-					if (source) {
-						source.src = source.dataset.src;
-						video.load();
-					}
-				});
-			});
+
 
 		</script>
 		<script src="assets/js/Josbrowser.js"></script>
