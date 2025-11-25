@@ -1042,6 +1042,11 @@ address {
     aspect-ratio: unset;
 }
 
+.gallery .group > .portrait video{
+    border: 1px solid red;
+    aspect-ratio: 3 / 4;
+}
+
 @media (min-width: 768px) {
     .gallery .group > .grid-span-first {
         grid-column: 1 / span 2;
@@ -1054,9 +1059,14 @@ address {
         grid-row: span 2;
         aspect-ratio: unset;
     }
+     .gallery.alt .group > :nth-last-child(2):nth-child(even) {
+        grid-column: span 1;
+        aspect-ratio: unset;
+    }
 
-    .gallery .group video:last-child {
-        grid-column: span 2;
+
+    .gallery.alt .group> :last-child {
+        grid-row: span 2;
     }
 
     /* .gallery .group > :last-child {
