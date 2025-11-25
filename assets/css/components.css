@@ -1043,7 +1043,6 @@ address {
 }
 
 .gallery .group > .portrait video{
-    border: 1px solid red;
     aspect-ratio: 3 / 4;
 }
 
