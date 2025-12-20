@@ -183,11 +183,15 @@
 }
 /* ! 23 hier */
 .image[data-position] img {
-    object-fit: cover;
+    /* object-fit: cover; */
     display: block;
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    /* aspect-ratio: 4 / 3; */
+}
+
+.image.image-cover img{
+    object-fit: cover;
 }
 
 .image[data-position="top left"] img {
@@ -1036,6 +1040,11 @@ address {
     grid-auto-flow: dense;
 }
 
+.gallery .group .image[data-position] img 
+{
+    object-fit: cover;
+}
+
 .gallery .group > .grid-span-full {
     grid-column: span 3 / -1;
     grid-row: span 2;
@@ -1509,8 +1518,7 @@ main section.banner {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
-  min-height: 80vh; 
-  min-height: 80dvh; 
+
     width: min(100%, 1280px);
     padding-block: 0 2rem;
 }
@@ -1557,12 +1565,10 @@ main section.banner {
 }
 
 /* Panel (Spotlight) */
-
 .panel.spotlight {
     align-items: stretch;
     position: relative;
     overflow-y: hidden;
-    min-height: 60vh;
     min-height: 60dvh;
 }
 
@@ -1580,9 +1586,8 @@ main section.banner {
 }
 
 .panel.spotlight .image img {
-    object-fit: cover;
+    /* object-fit: cover; */
     /* todo min height ? */
-    min-height: 100%;
     display: block;
     position: absolute;
     top: 0;
