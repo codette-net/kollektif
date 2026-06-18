@@ -3,13 +3,17 @@
     position: sticky;
     inset: 0;
     z-index: 2;
-    border-bottom: 1px solid #726193;
+    border-bottom: 1px solid rgba(114, 97, 147/ 0.2);
     padding: clamp(0.5rem, 0.75rem + 5vw, 1rem) var(--padding-inline);
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #0b0b0b;
+    background-color: rgba(111, 111, 111, 0.75);
+    background-image: url("../../images/overlay.png"),
+        linear-gradient(180deg, #e37b7c 15%, #ffe4b4);
+        background-size: 128px 128px, auto;
+        color: #0b0b0b;
 }
 
 .logo img {
@@ -31,9 +35,9 @@
     display: flex;
     flex: 1 0 auto;
     /* width: min(100%,400px); */
-    gap: 1.5rem;
+    gap: 2rem;
     list-style: none;
-    justify-content: space-around;
+    justify-content: center;
     font-size: 1.375rem;
     align-items: center;
     margin: 0;
@@ -41,10 +45,26 @@
 .menu__link {
     cursor: pointer;
     transition: 0.2s all;
+    text-decoration: none;
+    border-bottom: none;
 }
 
-.menu__link.active {
+
+a.menu__link:hover,
+a.menu__link:focus,
+a.menu__link:active,
+a.menu__link.active {
+    color: #000000;
+    border-bottom: 2px solid #000000;
     font-weight: bold;
+    border-bottom: 2px solid #000000;
+    
+}
+
+a.logo:hover,
+a.logo:focus,
+a.logo:active {
+border-bottom: none;
 }
 
 .nav-btn-open {
@@ -80,7 +100,11 @@
         right: 0;
         width: 20rem;
         padding: 0.5em var(--padding-inline);
-        background-color: #0b0b0b;
+        background-color: rgba(11, 11, 11, 0.75);
+        background-image: url("../../images/overlay.png"),
+            linear-gradient(-90deg,  #e37b7c 15%, #ffe4b4);
+            background-size: 128px 128px, auto;
+
 
         height: 100vh;
 
